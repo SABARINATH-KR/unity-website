@@ -3,39 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNITY Website</title>
+    <title>Unity - Strength Lies in Unity</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="our Logo" class="logo">
-        <h1>Welcome to UNITY website </h1>
+        <div class="container">
+            <div class="logo">Unity</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#initiatives">Initiatives</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>our Tagline</h2>
-            <p>Strength lies in unity.</p>
-        </section>
-        <section>
-            <h2>OUr Members</h2>
-            <p>SAHNA SALEEPH,
-                SADIYA ABOOBACKER,
-                ADHITHYAN PC,
-                AARON RAJ PR,
-                NIVED KS,
-                SABARINATH KR,
-                SHAHZAD BIN MOHMED,
-                ALBRIN TB.</p>
-        </section>
-        <section>
-            <h2>Captain</h2>
-            <p>NIVED KS.</p>
-            <h2>VICE-Captain</h2>
-            <p>SAHNA SALEEPH.</p>
-        </section>
-    </main>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Strength Lies in Unity</h1>
+            <p>Join us in building a stronger community through collaboration and support.</p>
+            <a href="#contact" class="cta-button">Join Us</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Our mission is to foster unity and collaboration among diverse communities. We believe that together, we can achieve more.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <h3>Nived KS</h3>
+                <p><strong>Role:</strong> Captain</p>
+                <a href="#" class="learn-more" data-member="nived">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Sahana Saleeph</h3>
+                <p><strong>Role:</strong> Vice Captain</p>
+                <a href="#" class="learn-more" data-member="sahana">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Sadiya Aboobacker</h3>
+                <p><strong>Role:</strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="sadiya">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Adhithyan PC</h3>
+                <p><strong>Role:</ strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="adhithyan">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Aaron Raj PR</h3>
+                <p><strong>Role:</strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="aaron">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Sabarinath KR</h3>
+                <p><strong>Role:</strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="sabarinath">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Shahzad Bin Mohmed</h3>
+                <p><strong>Role:</strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="shahzad">Learn More</a>
+            </div>
+            <div class="team-member">
+                <h3>Albrin TВ</h3>
+                <p><strong>Role:</strong> Team Member</p>
+                <a href="#" class="learn-more" data-member="albrin">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2023 Unity. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        const learnMoreLinks = document.querySelectorAll('.learn-more');
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const closeModal = document.querySelector('.close');
+
+        const teamDetails = {
+            nived: {
+                title: "Nived KS",
+                description: "Nived is an experienced leader with a strong background in project management and team coordination. He excels in motivating team members and driving projects to successful completion."
+            },
+            sahana: {
+                title: "Sahana Saleeph",
+                description: "Sahana is a strategic thinker with expertise in community outreach and engagement. She is passionate about building relationships and fostering collaboration among diverse groups."
+            },
+            sadiya: {
+                title: "Sadiya Aboobacker",
+                description: "Sadiya brings creativity and innovation to the team. Her skills in digital marketing and content creation help amplify our message and reach a wider audience."
+            },
+            adhithyan: {
+                title: "Adhithyan PC",
+                description: "Adhithyan is a tech-savvy individual with a knack for problem-solving. He plays a crucial role in managing our online platforms and ensuring smooth operations."
+            },
+            aaron: {
+                title: "Aaron Raj PR",
+                description: "Aaron is a dedicated team player with strong analytical skills. He focuses on data-driven decision-making to enhance our initiatives and measure their impact."
+            },
+            sabarinath: {
+                title: "Sabarinath KR",
+                description: "Sabarinath is known for his exceptional communication skills. He is responsible for public relations and ensuring our message resonates with the community."
+            },
+            shahzad: {
+                title: "Shahzad Bin Mohmed",
+                description: "Shahzad is a passionate advocate for social change. His experience in community service and volunteer management is invaluable to our mission."
+            },
+            albrin: {
+                title: "Albrin TВ",
+                description: "Albrin is a creative designer who brings our vision to life through visual storytelling. His work enhances our branding and outreach efforts."
+            }
+        };
+
+        learnMoreLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const member = this.getAttribute('data-member');
+                modalTitle.textContent = teamDetails[member].title;
+                modalDescription.textContent = teamDetails[member].description;
+                modal.style.display = "block";
+            });
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
